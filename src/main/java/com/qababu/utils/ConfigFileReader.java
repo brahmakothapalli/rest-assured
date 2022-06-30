@@ -1,4 +1,4 @@
-package com.qababu;
+package com.qababu.utils;
 
 import java.io.IOException;
 import java.io.InputStream;
