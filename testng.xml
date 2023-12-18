@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="D:/qababu/rest-assured">
+        <classes>
+            <class name="com.qababu.blog.LearnGetRequestTest">
+                <methods>
+                    <include name="testGetListOfUsers"/>
+                </methods>
+            </class>
+            <class name="com.qababu.blog.LearnPostRequestTest">
+                <methods>
+                    <include name="testSendingPostRequest"/>
+                </methods>
+            </class>
+            <class name="com.qababu.tests.AssignmentClass">
+                <methods>
+                    <include name="testAuthenticateWithToken"/>
+                </methods>
+            </class>
+            <class name="com.qababu.tests.BasicAuthentication">
+                <methods>
+                    <include name="testBasicAuthentication"/>
+                </methods>
+            </class>
+            <class name="com.qababu.tests.GetRequests">
+                <methods>
+                    <include name="testBookStoreGetRequests"/>
+                    <include name="testGetUser"/>
+                    <include name="testGetQueryParam"/>
+                    <include name="testGetPathParam"/>
+                </methods>
+            </class>
+            <class name="com.qababu.tests.PostRequestTests">
+                <methods>
+                    <include name="createUserTest"/>
+                </methods>
+            </class>
+            <class name="com.qababu.tests.authentication.AuthenticationTests">
+                <methods>
+                    <include name="testGenerateToken"/>
+                    <include name="testBasicAuthentication"/>
+                    <include name="testBearerTokenAuthentication"/>
+                </methods>
+            </class>
+            <class name="com.qababu.tests.oAuth2Test">
+                <methods>
+                    <include name="testingOauth2Authorization"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

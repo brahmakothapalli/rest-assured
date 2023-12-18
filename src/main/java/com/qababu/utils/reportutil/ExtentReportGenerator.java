@@ -1,4 +1,4 @@
-package com.qababu.utils;
+package com.qababu.utils.reportutil;
 
 import org.testng.ITestContext;
 import org.testng.ITestListener;
