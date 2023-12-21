@@ -1,8 +1,14 @@
 package com.qababu.blog;
 
 import io.restassured.RestAssured;
+import io.restassured.http.ContentType;
+import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
+import org.json.simple.JSONObject;
 import org.testng.annotations.Test;
+
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class LearnGetRequestTest {
 
@@ -14,9 +20,16 @@ public class LearnGetRequestTest {
         // the end point
         RestAssured.basePath = "/api/users?page=2";
 
-        Response response = RestAssured.given().header("Content-type", "application/json")
+        Response response = RestAssured.given().contentType(ContentType.JSON)
                 .when().get();
-        System.out.println(response.asPrettyString());
+//        System.out.println(response.asPrettyString());
         System.out.println("The status code is :: "+response.getStatusCode());
+        JsonPath jsonPath = new JsonPath(response.asString());
+        System.out.println(jsonPath.get("page").toString());
+        System.out.println(jsonPath.get("total").toString());
+        System.out.println(jsonPath.get("data").toString());
+        List<Object> data = jsonPath.getList("data");
+        data.forEach(System.out::println);
+
     }
 }

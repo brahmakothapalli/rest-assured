@@ -1,4 +1,4 @@
-package com.qababu.tests;
+package tests;
 
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
@@ -28,9 +28,9 @@ public class AssignmentClass {
 
         JsonPath jsonResponse = new JsonPath(responseAsString);
 
-        System.out.println(jsonResponse.get("[0].name"));
+//        System.out.println(jsonResponse.get("[0].name"));
 
-        System.out.println(jsonResponse.get("[1].name"));
+//        System.out.println(jsonResponse.get("[1].name"));
 
     }
 }

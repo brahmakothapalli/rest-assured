@@ -1,4 +1,4 @@
-package com.qababu.tests;
+package tests;
 
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
@@ -20,7 +20,7 @@ public class oAuth2Test {
                 .post("http://coop.apps.symfonycasts.com/token");
 
         System.out.println(resp.jsonPath().prettify());
-        System.out.println(resp.jsonPath().get("access_token"));
+//        System.out.println(resp.jsonPath().get("access_token"));
 
 
         RestAssured.given().auth().oauth2((String) resp.jsonPath().get("access_token"))

@@ -1,4 +1,4 @@
-package com.qababu.utils.reportutil;
+package utilities.reportutil;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;

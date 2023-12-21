@@ -1,4 +1,4 @@
-package com.qababu.tests;
+package tests;
 
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
@@ -41,7 +41,7 @@ public class GetRequests {
         System.out.println(response.getStatusLine());
 
         JsonPath jsonResponse = new JsonPath(responseAsString);
-        System.out.println(jsonResponse.get("name"));
+//        System.out.println(jsonResponse.get("name"));
     }
 
     @Test
@@ -62,7 +62,7 @@ public class GetRequests {
         System.out.println(response.getStatusLine());
 
         JsonPath jsonResponse = new JsonPath(responseAsString);
-        System.out.println(jsonResponse.get("name"));
+//        System.out.println(jsonResponse.get("name"));
     }
 
     @Test
@@ -84,6 +84,6 @@ public class GetRequests {
         System.out.println(response.getStatusLine());
 
         JsonPath jsonResponse = new JsonPath(responseAsString);
-        System.out.println(jsonResponse.get("name"));
+//        System.out.println(jsonResponse.get("name"));
     }
 }

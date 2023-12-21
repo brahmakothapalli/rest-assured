@@ -1,4 +1,4 @@
-package com.qababu.utils;
+package utilities;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -9,11 +9,14 @@ import java.util.Map;
 
 public class JsonUtil {
 
+    private JsonUtil(){}
+
     private static ObjectMapper objectMapper = new ObjectMapper();
 
     @SneakyThrows
-    public static Map<String, String> getJsonDataAsMap(String jsonFileName){
+    public static Map<String, Object> getJsonDataAsMap(String jsonFileName){
         String filePath = System.getProperty("user.dir")+"/src/test/resources/"+jsonFileName+".json";
         return objectMapper.readValue(new File(filePath), new TypeReference<>() {});
     }
+
 }

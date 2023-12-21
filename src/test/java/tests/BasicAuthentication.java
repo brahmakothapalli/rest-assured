@@ -1,6 +1,6 @@
-package com.qababu.tests;
+package tests;
 
-import com.qababu.utils.ConfigFileReader;
+import utilities.ConfigFileReader;
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;

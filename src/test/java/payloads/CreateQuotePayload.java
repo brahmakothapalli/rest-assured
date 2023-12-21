@@ -7,8 +7,8 @@ import java.util.Locale;
 
 public class CreateQuotePayload {
 
-    public static HashMap<String, String> createQuotePayload(String product, String brokerId) {
-        HashMap<String, String> quotePayload = new HashMap<>();
+    public static HashMap<String, Object> createQuotePayload(String product, String brokerId) {
+        HashMap<String, Object> quotePayload = new HashMap<>();
         Faker faker = new Faker(Locale.ENGLISH);
         quotePayload.put("userId", String.valueOf(faker.number()));
         quotePayload.put("applicantName", faker.name().toString());
