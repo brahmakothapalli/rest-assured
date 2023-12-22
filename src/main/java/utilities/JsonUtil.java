@@ -14,8 +14,8 @@ public class JsonUtil {
     private static ObjectMapper objectMapper = new ObjectMapper();
 
     @SneakyThrows
-    public static Map<String, Object> getJsonDataAsMap(String jsonFileName){
-        String filePath = System.getProperty("user.dir")+"/src/test/resources/"+jsonFileName+".json";
+    public static Map<String, Object> getJsonDataAsMap(String environment){
+        String filePath = System.getProperty("user.dir")+"/src/test/resources/"+environment+".json";
         return objectMapper.readValue(new File(filePath), new TypeReference<>() {});
     }
 

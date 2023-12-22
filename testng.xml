@@ -18,7 +18,7 @@
                     <include name="testAuthenticateWithToken"/>
                 </methods>
             </class>
-            <class name="com.qababu.tests.BasicAuthentication">
+            <class name="com.qababu.tests.BasicAuthenticationTests">
                 <methods>
                     <include name="testBasicAuthentication"/>
                 </methods>

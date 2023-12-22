@@ -1,5 +1,6 @@
 {
-  "baseUrl": "https://reqres.in/api/users",
-  "token": "empty token"
-
+  "baseUrl": "https://restful-booker.herokuapp.com",
+  "token": "empty token",
+  "userName": "admin",
+  "password": "password123"
 }

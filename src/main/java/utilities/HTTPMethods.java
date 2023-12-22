@@ -8,11 +8,10 @@ import java.util.Map;
 
 public class HTTPMethods {
 
-    public static Response postRequest(String endPoint, Map<String, Object> payload, Map<String, String> headers) {
-
+    public static Response postRequest(String endpoint, Map<String, Object> payload, Map<String, String> headers) {
         return RestAssured.given()
                 .headers(headers)
-                .baseUri(endPoint)
+                .baseUri(endpoint)
                 .contentType(ContentType.JSON)
                 .body(payload)
                 .post()
