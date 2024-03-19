@@ -36,4 +36,15 @@ public class CreateBookingPayload {
         bookingPayload.put("additionalneeds", faker.food().fruit());
         return bookingPayload;
     }
+
+    public static CreateBookingPayload createBookingPayloadAsPOJO(){
+        Faker faker = new Faker(Locale.ENGLISH);
+        return CreateBookingPayload.builder()
+                .firstname(faker.name().firstName())
+                .lastname(faker.name().lastName())
+                .totalprice(faker.number().numberBetween(2, 4))
+                .bookingdates(new BookingDates())
+                .additionalneeds(faker.food().fruit())
+                .build();
+    }
 }
