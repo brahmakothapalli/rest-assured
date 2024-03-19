@@ -4,17 +4,14 @@ import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
-import org.json.simple.JSONObject;
 import org.testng.annotations.Test;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class LearnGetRequestTest {
 
     @Test
     public void testGetListOfUsers(){
-
         // the base url
         RestAssured.baseURI = "https://reqres.in";
         // the end point
@@ -30,6 +27,5 @@ public class LearnGetRequestTest {
         System.out.println(jsonPath.get("data").toString());
         List<Object> data = jsonPath.getList("data");
         data.forEach(System.out::println);
-
     }
 }

@@ -1,6 +1,6 @@
 package workflows;
 
-import base.BaseTest;
+import base.BaseClass;
 import utilities.HTTPMethods;
 import io.restassured.response.Response;
 import payloads.CreateQuotePayload;
@@ -11,11 +11,11 @@ import java.util.Map;
 public class CreateQuoteWF {
 
     public static Response createQuote(Map<String, Object> payload1){
-        String baseUrl = BaseTest.configurationMap.get("baseUrl").toString();
+        String baseUrl = BaseClass.configurationMap.get("baseUrl").toString();
         Map<String, String> header = new HashMap<>();
-        header.put("Authorization", "Bearer "+BaseTest.configurationMap.get("token").toString());
-        String product = BaseTest.configurationMap.get("productId").toString();
-        String brokerId = BaseTest.configurationMap.get("brokerId").toString();
+        header.put("Authorization", "Bearer "+ BaseClass.configurationMap.get("token").toString());
+        String product = BaseClass.configurationMap.get("productId").toString();
+        String brokerId = BaseClass.configurationMap.get("brokerId").toString();
         Map<String, Object> payload = CreateQuotePayload.createQuotePayload(product, brokerId);
         return HTTPMethods.postRequest(baseUrl, payload, header);
     }

@@ -6,14 +6,13 @@ import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.testng.annotations.Test;
 
-public class AssignmentClass {
+public class AssignmentTests {
 
     public String baseUrl = "https://api.github.com/user/repos";
     public final String token = "YOUR_BEARER_TOKEN_HERE";
 
     @Test
     public void testAuthenticateWithToken(){
-
         Response response = RestAssured.
                 given().
                         header("content-type", "application/json").
@@ -31,6 +30,5 @@ public class AssignmentClass {
 //        System.out.println(jsonResponse.get("[0].name"));
 
 //        System.out.println(jsonResponse.get("[1].name"));
-
     }
 }

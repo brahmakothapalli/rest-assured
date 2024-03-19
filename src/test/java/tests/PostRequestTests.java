@@ -1,6 +1,6 @@
 package tests;
 
-import base.BaseTest;
+import base.BaseClass;
 import io.restassured.response.Response;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -17,7 +17,7 @@ public class PostRequestTests {
      */
     @Test
     public void createQuoteTest(){
-        Map<String, Object> payload = CreateQuotePayload.createQuotePayload(BaseTest.configurationMap.get("productId").toString(), BaseTest.configurationMap.get("brokerId").toString());
+        Map<String, Object> payload = CreateQuotePayload.createQuotePayload(BaseClass.configurationMap.get("productId").toString(), BaseClass.configurationMap.get("brokerId").toString());
         Response response = CreateQuoteWF.createQuote(payload);
         Assert.assertEquals(response.getStatusCode(), 201);
     }

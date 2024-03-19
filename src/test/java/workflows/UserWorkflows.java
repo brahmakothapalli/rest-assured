@@ -1,7 +1,6 @@
 package workflows;
 
-import base.BaseTest;
-import constants.Endpoints;
+import base.BaseClass;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
@@ -9,7 +8,7 @@ import utilities.HTTPMethods;
 
 import java.util.Map;
 
-import static base.BaseTest.BASE_URL;
+import static base.BaseClass.BASE_URL;
 import static constants.Endpoints.LIST_OF_USERS;
 
 public class UserWorkflows {
@@ -31,6 +30,6 @@ public class UserWorkflows {
     }
 
     public static Response createUser(String endPoint, Map<String, Object> payload){
-        return HTTPMethods.postRequest(BASE_URL+endPoint, payload, BaseTest.headersMap);
+        return HTTPMethods.postRequest(BASE_URL+endPoint, payload, BaseClass.headersMap);
     }
 }

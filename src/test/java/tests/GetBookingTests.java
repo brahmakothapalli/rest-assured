@@ -9,7 +9,7 @@ import utilities.HTTPMethods;
 
 import java.util.HashMap;
 
-import static base.BaseTest.BASE_URL;
+import static base.BaseClass.BASE_URL;
 
 public class GetBookingTests {
 

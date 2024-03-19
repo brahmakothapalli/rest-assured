@@ -13,7 +13,7 @@
                     <include name="testSendingPostRequest"/>
                 </methods>
             </class>
-            <class name="com.qababu.tests.AssignmentClass">
+            <class name="com.qababu.tests.AssignmentTests">
                 <methods>
                     <include name="testAuthenticateWithToken"/>
                 </methods>
